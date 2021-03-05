@@ -1,0 +1,51 @@
+<body>
+	<h2 style="text-align:center;margin-top:10%">Approaching Time Series Analysis...</h2>
+	<p style="text-align:center">Must be a csv file with more than 100 records</p>
+	<p style="text-align:center">Please also fill number of epochs or partitions as per choice</p>
+	<form action={{url_for('results')}} method=post enctype=multipart/form-data>
+		  	<table style="margin-left:auto;margin-right:auto;box-shadow: 0 0 10px 5px rgba(0,0,0,0.6); border-radius:5px;width:25%;height:30%">
+				<tr>
+					<td><label for="inpdata">Dataset:</label></td>
+  					<td><input type="file" name=inpdata></td>
+  				</tr>
+				<tr>
+					<td><input type="radio" id="lstm" name="modelselect" value="1" onClick="showlstm()"></td>
+					<td><label for="lstm">Recurrent Neural Network</label></td>
+  				</tr>
+				<tr>		
+					<td><input type="radio" id="fuzzy" name="modelselect" value="2" onClick="showfuzzy()"></td>
+					<td><label for="fuzzy">Fuzzy Inference System</label></td>
+				</tr>	
+				<tr>
+					<td><p>Epochs:</p></td>
+					<td id="itr" style="display:none"><input type="text" name="inpepoch" size="20"></td>
+  			        </tr>
+				<tr>        
+					<td><p>Partitions:</p></td>
+					<td id="prt" style="display:none"><input type="text" name="inppart" size="20"></td>
+  				<tr>
+					<td>&nbsp</td>
+				</tr>
+				<tr>
+					<td><input type="submit"></td>
+				</tr>
+			</table>  
+	</form>
+	<p style="text-align:center"><a href="../static/sample-data.csv">Start with sample data.</a><p>
+
+</body>
+<script type="text/javascript">
+function showlstm() {
+    if (document.getElementById('lstm').checked) {
+        document.getElementById('itr').style.display='block';
+	document.getElementById('prt').style.display='none';
+    }
+}
+
+function showfuzzy() {
+    if (document.getElementById('fuzzy').checked) {
+        document.getElementById('prt').style.display='block';
+	document.getElementById('itr').style.display='none';
+    }
+}
+</script>
