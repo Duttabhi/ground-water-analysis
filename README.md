@@ -5,3 +5,9 @@ https://analysingseries.azurewebsites.net/
 
 Front image
 ![Input interface](https://github.com/Duttabhi/ground-water-analysis/blob/main/mlwebone.png)
+
+Selecting parameters
+![Parameter Selection](https://github.com/Duttabhi/ground-water-analysis/blob/main/mlwebtwo.png)
+
+Results
+![Output](https://github.com/Duttabhi/ground-water-analysis/blob/main/mlwebthree.png)
